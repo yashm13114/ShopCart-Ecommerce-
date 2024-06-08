@@ -26,7 +26,7 @@ import { SiAdguard } from "react-icons/si";
 import { SiFsecure } from "react-icons/si";
 import Footer from './Footer';
 import { FeatureProduct } from './FeatureProduct';
-import "../../src/"
+
 export const Home = () => {
   return (
     <>
