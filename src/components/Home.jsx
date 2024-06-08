@@ -25,7 +25,6 @@ import { MdSecurity } from "react-icons/md";
 import { SiAdguard } from "react-icons/si";
 import { SiFsecure } from "react-icons/si";
 import Footer from './Footer';
-import 'C:/Users/YASH MEHTA/Desktop/Ecommerce website/frontend/src/App.css';
 import { FeatureProduct } from './FeatureProduct';
 export const Home = () => {
   return (
