@@ -1,0 +1,43 @@
+.hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-effect img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+.hover-effect:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+
+/* for navbar */
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    /* Space for the line */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    border-radius: 20px;
+    /* Thickness of the line */
+    background-color: #7e3af2;
+    /* Purple color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
