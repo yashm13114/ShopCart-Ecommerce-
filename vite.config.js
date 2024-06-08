@@ -8,5 +8,6 @@ export default defineConfig({
         rollupOptions: {
             external: ['/path/to/App.css']
         }
-    }
+    },
+    base: "/ShopCart-Ecommerce-/"
 })
