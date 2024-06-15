@@ -1,0 +1,15 @@
+/* Add this CSS to your global stylesheet */
+
+@media (max-width: 767px) {
+    .mobile-menu {
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .mobile-menu.open {
+        max-height: 500px;
+        /* Adjust this value as needed */
+    }
+    .mobile-menu.closed {
+        max-height: 0;
+    }
+}
