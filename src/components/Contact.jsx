@@ -12,9 +12,30 @@ export const Contact = () => {
     Do something here !
     */
   }
+  const getUserName = () => {
+    try {
+      const userData = JSON.parse(localStorage.getItem('user'));
+      return userData.result.user.name; // Assuming 'name' is a property in your user data
+    } catch (error) {
+      console.error('Error retrieving user data from localStorage:', error);
+      return '';
+    }
+  };
+  const getEmail = () => {
+    try {
+      const userData = JSON.parse(localStorage.getItem('user'));
+      return userData.result.user.email; // Assuming 'name' is a property in your user data
+    } catch (error) {
+      console.error('Error retrieving user data from localStorage:', error);
+      return '';
+    }
+  };
+
+  const userName = getUserName();
+  const getemailid = getEmail();
   return (
     <>
-      <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700">
+      <div className=" mx-auto w-full max-w-7xl bg-white text-gray-700">
         <div className="grid grid-cols-2">
 
           {/* :MAP CONTAINER */}
@@ -39,6 +60,7 @@ export const Contact = () => {
                 {/* :::input */}
                 <input ref={nameRef} type="text" id="name" name="name"
                   placeholder="Name"
+                  value={userName}
                   className="p-4 form-input w-full block shadow-sm rounded border-gray-300 bg-gray-100 text-base placeholder-gray-300 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
@@ -49,6 +71,7 @@ export const Contact = () => {
                 {/* :::input */}
                 <input ref={emailRef} type="email" id="email" name="email"
                   placeholder="Email Address"
+                  value={getemailid}
                   className="p-4 form-input w-full block shadow-sm rounded border-gray-300 bg-gray-100 text-base placeholder-gray-300 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>

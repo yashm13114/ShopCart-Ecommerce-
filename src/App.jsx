@@ -71,6 +71,7 @@ import { PasswordReset } from './components/PasswordReset';
 import { ForgotPass } from './components/ForgotPass';
 import LogOut from './components/LogOut';
 import { UserProvider } from './components/context/UserContext';  // Import UserProvider
+import AccountPage from './components/AccountPage';
 
 const Routing = () => {
     return (
@@ -83,6 +84,7 @@ const Routing = () => {
                 <Route path="/products" element={<ProductPage />} />
                 <Route path="/singleproduct/:id" element={<SingleProduct />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/account" element={<AccountPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/forgotpass/:id/:token" element={<ForgotPass />} />

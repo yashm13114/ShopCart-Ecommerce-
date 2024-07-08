@@ -8,8 +8,9 @@ import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Footer from './Footer';
+import '../App.css';
 const Cart = () => {
-  const { cart, clearCart, total_price, shipping_fee,setDecrease, setIncrement,removeItem } = useCartContext();
+  const { cart, clearCart, total_price, shipping_fee,setDecrease, setIncrement,removeItem,tax } = useCartContext();
   if (cart.length === 0) {
     return <div className='lg:text-3xl text-xl grid justify-center items-center'>There are no items in the cart.</div>;
   }
@@ -67,23 +68,59 @@ const Cart = () => {
         <button type="button" onClick={clearCart} className='bg-red-500 p-4 text-white'>Clear Cart</button>
       </div>
 
-      <div className="p-4 mt-3">
-        <div className="bg-gray-200 p-4 rounded-lg shadow-md w-full md:w-1/2 lg:w-1/3 mx-auto">
-          <div className="flex justify-between items-center mb-1">
-            <p className="font-semibold">Subtotal:</p>
-            <p className="text-right"><FormattPrice price={total_price} /></p>
-          </div>
-          <div className="flex justify-between items-center">
-            <p className="font-semibold">Shipping Fee:</p>
-            <p className="text-right"><FormattPrice price={shipping_fee} /></p>
-          </div>
-          <hr className="my-2" />
-          <div className="flex justify-between items-center font-semibold text-lg">
-            <p>Order Total:</p>
-            <p className="text-right"><FormattPrice price={shipping_fee + total_price} /></p>
+
+
+{/* chexk out */}
+
+
+<div className="containe grid justify-center my-5">
+      <div className="card cart">
+        <label className="title">CHECKOUT</label>
+        <div className="steps">
+          <div className="step">
+            {/* <div>
+              <span>SHIPPING</span>
+              <p>221B Baker Street, W1U 8ED</p>
+              <p>London, United Kingdom</p>
+            </div> */}
+            <hr />
+            {/* <div>
+              <span>PAYMENT METHOD</span>
+              <p>Visa</p>
+              <p>**** **** **** 4243</p>
+            </div> */}
+            <hr />
+            <div className="promo">
+              <span>HAVE A PROMO CODE?</span>
+              <form className="form">
+                <input type="text" placeholder="Enter a Promo Code" className="input_field" />
+                <button type="submit">Apply</button>
+              </form>
+            </div>
+            <hr />
+            <div className="payments">
+              <span>PAYMENT</span>
+              <div className="details">
+                <span>Subtotal:</span>
+                <span><FormattPrice price={total_price} /></span>
+                <span>Shipping:</span>
+                <span><FormattPrice price={shipping_fee}/></span>
+                <span>Tax:</span>
+                <span><FormattPrice price={tax}/></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div className="card checkout">
+        <div className="footer">
+          <label className="price"><FormattPrice price={shipping_fee + total_price+ tax}/></label>
+          <button className="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+      
       <Footer />
 
     </>
