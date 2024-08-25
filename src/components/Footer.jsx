@@ -50,7 +50,7 @@ const Footer = () => {
                                 <li><p 
                                     className="text-base font-normal max-sm:text-center text-white whitespace-nowrap">+91 945 658 3256</p></li>
                                 <li><p 
-                                    className="text-base font-normal max-sm:text-center text-white whitespace-nowrap ">support@pagedone.com</p></li>
+                                    className="text-base font-normal max-sm:text-center text-white whitespace-nowrap ">support@shopcart.com</p></li>
 
                             </ul>
                         </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="flex flex-col-reverse gap-5 md:flex-row items-center first-letter:items-center justify-between pt-7">
-                    <p className="font-normal text-sm text-white">©<NavLink to={"https://pagedone.io/"}>pagedone</NavLink>2023, All rights reserved.</p>
+                    <p className="font-normal text-sm text-white">©<NavLink to={"https://pagedone.io/"}>shopcart</NavLink>2023, All rights reserved.</p>
                     <ul className="flex items-center gap-9">
                         <li><NavLink
                             className="text-white text-sm font-normal transition-all duration-300 hover:text-indigo-600 focus-within:text-indigo-600 focus-within:outline-0">Terms</NavLink>
