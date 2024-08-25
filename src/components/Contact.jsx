@@ -119,7 +119,7 @@ export const Contact = () => {
               <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde, voluptatibus nemo molestiae iure, repudiandae quaerat ipsam, labore sed dolorem nisi odit at esse ullam suscipit quidem necessitatibus aut modi.</p>
               {/* Email contact */}
               <NavLink to={"#mail"} className="inline-flex items-center text-sm text-blue-400 font-semibold hover:text-blue-500">
-                mail-contact@fancycontact.com
+                mail-contact@shopcart.com
               </NavLink>
               {/* Address */}
               <p className="text-sm text-gray-500 leading-6">18 Avenue des Champs-Élysées, <br /> 75008 Paris <br /> France</p>
